@@ -32481,6 +32481,18 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+const arrowIcon = /*#__PURE__*/_react.default.createElement("svg", {
+  xmlns: "http://www.w3.org/2000/svg",
+  fill: "none",
+  viewBox: "0 0 24 24",
+  stroke: "currentColor"
+}, /*#__PURE__*/_react.default.createElement("path", {
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: "2",
+  d: "M7 16l-4-4m0 0l4-4m-4 4h18"
+}));
+
 const BASE_URL = "https://api.themoviedb.org/3/movie/";
 const API_KEY = `?api_key=`;
 const IMAGE_URL = 'https://image.tmdb.org/t/p/';
@@ -32521,7 +32533,11 @@ function MovieDetail() {
     return /*#__PURE__*/_react.default.createElement("li", {
       key: genre.id
     }, genre.name);
-  })))));
+  })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/"
+  }, /*#__PURE__*/_react.default.createElement("span", {
+    className: "linkToMainPage"
+  }, arrowIcon, " Go to main page")))));
 }
 },{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"pages/App.js":[function(require,module,exports) {
 "use strict";
@@ -32598,7 +32614,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56683" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57678" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

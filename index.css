@@ -13,6 +13,14 @@ body {
 	color: white;
 }
 
+header {
+    text-align: center;
+}
+
+header > h1 {
+	font-size: 3rem;
+}
+
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
@@ -21,6 +29,14 @@ code {
 input {
 	color: white;
 	background-color: transparent;
+	width: 300px;
+	height: 30px;
+	max-width: 60%;
+	font-size: 1rem;
+}
+
+img {
+	max-width: 100%;
 }
 
 .backdrop {
@@ -36,14 +52,28 @@ input {
 	z-index: 10;
 	color: #333;
 	margin-top: 400px;
-	display: flex;
-	text-align: left;
-	gap: 20px;
 	padding: 20px;
+	text-align: left;
 }
 
 .detail-poster {
 	margin-top: -160px;
 	box-shadow: 0 0 0 0.3;
 	
+}
+
+.linkToMainPage {
+	color: black;
+	font-size: 2rem;
+}
+
+svg {
+	width: 25px;
+}
+
+@media (min-width: 650px) {
+	.detail-details {
+		display: flex;
+		gap: 20px;
+	}
 }
