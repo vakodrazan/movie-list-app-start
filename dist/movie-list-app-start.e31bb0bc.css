@@ -77,6 +77,12 @@ svg {
 		gap: 20px;
 	}
 }
+
+.isLoading {
+	font-size: 2rem;
+	color: white;
+	font-weight: 600;
+}
 .App {
 	text-align: center;
 }

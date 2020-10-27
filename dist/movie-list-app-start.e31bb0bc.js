@@ -32457,7 +32457,9 @@ function MoviesList() {
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_Filter.default, {
     filter: filter,
     setFilter: setFilter
-  }), /*#__PURE__*/_react.default.createElement("ul", {
+  }), movies.length === 0 && /*#__PURE__*/_react.default.createElement("p", {
+    className: "isLoading"
+  }, "Loding..."), /*#__PURE__*/_react.default.createElement("ul", {
     className: "movies-list"
   }, movies.filter(movie => movie.title.toLowerCase().includes(filter.toLowerCase())).map(movie => /*#__PURE__*/_react.default.createElement(_Movie.default, {
     key: movie.id,

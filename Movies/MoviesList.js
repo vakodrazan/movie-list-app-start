@@ -41,6 +41,7 @@ export function MoviesList() {
         <div>
 
             <Filter filter={filter} setFilter={setFilter} />
+            {movies.length === 0 && <p className="isLoading">Loding...</p>}
             <ul className="movies-list">
                 { movies
                     .filter(movie => movie.title.toLowerCase().includes(filter.toLowerCase()))
